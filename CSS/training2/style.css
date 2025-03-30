@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: #ccc;
+  }
+  
+  article {
+    width: 210mm;
+    height: 297mm;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  /* 信纸基本样式 */
+  .letter-paper{
+    /* 后备方案-仅顶部图片 */
+    background: url('top-image.png') top no-repeat;
+
+    background: 
+        /* 顶部图片固定在顶部 */
+        url('top-image.png') top no-repeat,
+        /* 底部图片固定在底部 */
+        url('bottom-image.png') bottom no-repeat,
+        /* 半透明渐变纹理 */
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.1) 0%,
+            transparent 15%,
+            transparent 85%,
+            rgba(0,0,0,0.1) 100%
+        ),
+        /* 白色背景 */
+        white;
+        /* 边框样式 */
+        border-top: 1mm solid #f0e6d2;
+        border-bottom: 1mm solid #f0e6d2;
+
+        background-attachment: local; /* 渐变随内容滚动 */
+        padding: 2rem; /* 添加内边距使内容不仅贴边缘 */
+        min-height: 100vh; /* 确保信纸至少占满整个视口高度 */
+  }
+
+  address {
+    position: absolute;
+    bottom: 8mm;
+    right: 20mm;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 12mm;
+    left: 20mm;
+    width: 128px;
+    height: 128px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 44px 0;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    /* 设置标志为背景 */
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 标志圆形效果 */
+    border-radius: 50%;
+
+    /* 元素居中 */
+    margin: 0 auto;
+  }
+  
+  /* Your CSS below here */

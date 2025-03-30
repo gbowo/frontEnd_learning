@@ -1,0 +1,74 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  /* Your CSS below here */
+
+div {
+    /* 尺寸和布局 */
+    width: 200px;
+    height: 50px;
+    line-height: 50px; /* 使文本纵向居中 */
+    text-align: center;
+
+    font-size: 1.125rem; /* 基于16px基准 */
+
+    /* 
+    字体大小计算说明：
+    假设浏览器默认基准是16px，
+    1rem = 16px，
+    1.125rem = 18px，
+    这是大按钮的理想字号
+    */
+
+    /* 颜色方案 */
+    --base-color: #5a8fec; /* 定义基础颜色 - 柔和的蓝色 */
+    color: var(black); /* 字体颜色使用基础色 */
+    background-color: var(--base-color); /* 背景使用基础色 */
+    text-shadow: 0 1px 0 rgba(0,0 , 0, 0.5); /* 黑色文字阴影增强可读性 */
+
+    /* 边框样式 */
+    border-radius: 8px; /* 圆角 */
+    border: 1px solid #3a6fc8; /* 比基础色深20% */
+
+    /* 渐变效果 */
+    background-image: linear-gradient(
+        to bottom left,
+        transparent 0%,
+        rgba(0,0,0,0.2) 30%,
+        rgba(0,0,0,0.2) 100%
+    );
+
+    /* 多重阴影效果 */
+    box-shadow: 
+    /* 外部阴影 - 浮起效果 */
+    o 2px 5px rgba(0, 0, 0, 0.2)
+    
+    /* 内阴影 - 左上角高光 */
+    inset 2px 2px 3px rgba(255,255,255,0.3),
+    
+    /* 内阴影 - 右下角阴影 */
+    inset-2px -2px -3px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer; /* 鼠标悬停时变为手型 */
+    transition: all 0.2s ease; /* 平滑过渡效果 */
+    user-select: none;/* 防止文字被选中 */
+}
+
+
+/* 悬停增强效果 */
+div:hover{
+    filter: brightness(1.05); /* 轻微提亮 */
+    box-shadow: 
+    0 3px 8px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 3px rgba(0,0,0,0.3);
+}
+
+/* 点击状态效果 */
+div:active {
+    transform: translateY(2px); /* 按下效果 */
+    box-shadow: inset0 1px 2px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 3px rgba(0,0,0,0.3);
+}

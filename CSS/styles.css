@@ -1,0 +1,47 @@
+h1 {
+    color: red;
+}
+
+p,
+li {
+  color: green;
+}
+
+li {
+  list-style-type: none;
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+li em {
+    color: rebeccapurple;
+}
+
+/* 设置直接出现在标题后面并且与标题具有相同层级的段落样式 */
+h1 + p {
+    font-size: 200%;
+}
+
+/* 使得没有被访问的链接颜色变为粉色、访问过的链接变为绿色。 */
+a:link {
+    color: pink;
+}
+  
+a:visited {
+    color: green;
+}
+
+/* 移除连接被鼠标悬停时的样式，如移除下划线 */
+a:hover {
+    text-decoration: none;
+}
+
+/* 多类型组合 */
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
