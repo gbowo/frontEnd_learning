@@ -1,0 +1,34 @@
+1. 定义变量和函数
+
+
+
+
+
+2. 纯文本字符串
+
+
+
+
+
+
+
+3. 事件监听器和未完成的函数定义
+
+randomize.addEventListener('click', result);
+
+function result() {
+
+  if(customName.value !== '') {
+    let name = customName.value;
+
+  }
+
+  if(document.getElementById("american").checked) {
+    let weight = Math.round(300);
+    let temperature = Math.round(94);
+
+  }
+
+  story.textContent = ;
+  story.style.visibility = 'visible';
+}

@@ -1,0 +1,204 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    font-family: s'Lora',serif;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    color: #333;
+  }
+  
+  h1,
+  h2,
+  h3{
+    font-family: 'Roboto Slab',sans-serif;
+    letter-spacing: 1px;
+  }
+
+  @font-face {
+    font-family: 'Lora';
+    src: url("fonts/lora-regular-webfont.woff2") format('woff2'),
+    url('fonts/lora-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/robotoslab-regular-webfont.woff2') format('woff2'),
+         url('fonts/robotoslab-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  
+  /* WRITE YOUR CODE BELOW HERE */
+
+  /* 设置全站网页的font-size为10px */
+  html{
+    font-size: 10px;
+  }
+
+  h1{
+    font-size: 3.2rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  h2{
+    font-size: 2.4rem;
+    margin: 1.8rem 0 1rem;
+  }
+
+  p,li{
+    font-size:1.6rem;
+    line-height: 1.6;
+  }
+
+  /* 在section元素中，每个标题后的第一段文字设置20px的文本缩进 */
+  section p:first-of-type{
+    text-indent: 20px;
+  }
+
+  /* 链接样式 */
+  a{
+    color: #a66;
+    text-decoration: underline;
+    padding: 0 0.2rem;
+  }
+
+  a:visited{
+    color: #8a4b4b;
+  }
+
+  a:focus{
+    outline: none;
+    text-decoration: none;
+    background: #f8e8e8;
+  }
+
+  a:hover{
+    text-decoration: none;
+    background: #f8e8e8;
+  }
+
+  a:active{
+    color: d44;
+    background: #f0d0d0;
+  }
+
+  a[href^="http"]::after{
+    content: "";
+    display: inline-block;
+    width: 1em;                  /* 与字体大小相同 */
+    height: 1em;                 /* 与字体大小相同 */
+    background-image: url('external-link-52.png');
+    background-size: contain;    /* 保持图标完整缩放 */
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 0.3em;          /* 与文字的间距 */
+  }
+
+  /* 列表样式 */
+  ul,ol{
+    margin: 1.6rem 0;
+    padding-left: 2.5rem;
+  }
+
+  li{
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  ul li{
+    list-style-type: none;
+    position: relative;
+  }
+
+  ul li::before{
+    content:"·";
+    color:#a66;
+    font-size: 1.2em;
+    position: absolute;
+    left: -1.5rem;
+  }
+
+  nav{
+    float: right;
+    width: 15%;
+    margin-top: 3rem;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid #e0d6cc;
+    position: relative;
+  }
+
+  /* 导航菜单样式 */
+  nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li{
+    margin-bottom: 1rem;
+  }
+
+  nav a{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    border: 1px solid #a66;
+    text-align: center;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    border-left: 3px solod transparent;/* 左侧指示条 */
+  }
+
+  nav a:hover,nav a:focus{
+    background: #a66;
+    color: white;
+  }
+
+  nav a:active{
+    background:#8a4b4b;
+  }
